@@ -1,0 +1,56 @@
+$padding-g:2%;
+
+p{
+    color:#ffffff
+}
+
+.tab-group{
+    padding-top: 40px; 
+    padding-left: $padding-g; 
+    padding-right: $padding-g;
+}
+
+.div-row{
+    padding: $padding-g;
+}
+
+.div-list{
+    margin: 0.5%;
+}
+
+.video{
+    margin:5px;
+}
+
+.spam-name{
+    font-size:1rem;
+}
+
+.channel-name{
+    font-size:0.8rem;
+}
+
+.mat-card-playList{
+    border: 1px solid #673ab7;
+    background-color: #673ab7; 
+    border-radius: 4px 3px 6px / 2px 4px; 
+    padding-top: 15px; 
+    padding-left: 0%; 
+    padding-right: 0%; 
+    padding-bottom: 0%;
+    margin: 5px;
+
+}
+
+.mat-card-title-playList{
+    padding-left:10px; 
+    padding-top: 0px; 
+    padding-right: 15px; 
+    margin-bottom: 0px; 
+    min-height: 70px;
+}
+
+.mat-chip-theme{
+    padding:5px;
+    border-radius: 20px;
+}
