@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { PlayList } from 'src/app/shared/model/PlayList.model';
 import { PlayListService } from 'src/app/shared/service/PlayList.service';
 
 @Component({

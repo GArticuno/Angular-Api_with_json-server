@@ -8,17 +8,24 @@ import { PlayList } from '../model/PlayList.model';
 })
 export class PlayListService {
 
-  apiUrl='http://localhost:3000/pl';
+  apiUrl= 'https://api-lives.herokuapp.com/playlists';
   httpOptions={
     headers: new HttpHeaders({
       'Content-Type' : 'application/json'
     })
   };
+  data: PlayList[] = [];
 
   constructor(private httpClient: HttpClient) { }
 
   public getPlayLists(): Observable<PlayList[]> {
-    return this.httpClient.get<PlayList[]>(this.apiUrl);
+    const json = this.httpClient.get<PlayList[]>(this.apiUrl)
+   .subscribe((res) => {
+     this.data = res;
+     console.log(this.data);
+   })
+    console.log(json)
+    return  this.httpClient.get<PlayList[]>(this.apiUrl);
   }
 
   public getPlayListsByGender(gender: string): Observable<PlayList[]> {
