@@ -20,10 +20,10 @@ export class PlaylistFormDialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.playlistForm=this.fb.group({
-      PlayListName: ['',[Validators.required]],
+      playListName: ['',[Validators.required]],
       channelName: ['',[Validators.required]],
-      PlayListLink!: ['',[Validators.required]],
-      PlayListTheme!: ['',[Validators.required]],
+      playListLink: ['',[Validators.required]],
+      playListTheme: ['',[Validators.required]],
     })
   }
 

@@ -1,9 +1,10 @@
 import { SafeResourceUrl } from '@angular/platform-browser';
 
 export class PlayList {
-    PlayListName!: string;
+    objectId!: string;
+    playListName!: string;
     channelName!: string;
-    PlayListLink!: string;
-    PlayListTheme!: string;
+    playListLink!: string;
+    playListTheme!: string;
     urlSafe!: SafeResourceUrl;
 }

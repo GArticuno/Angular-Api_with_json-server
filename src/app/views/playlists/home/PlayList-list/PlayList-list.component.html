@@ -3,23 +3,23 @@
       <mat-progress-bar *ngIf="!source" mode="indeterminate"></mat-progress-bar>
       <div fxLayout="row wrap" f1q  xLayoutAlign="start center" class="div-row">
         <div *ngFor="let PlayList of PlayListsSource" class="div-list">
-          
-          <mat-card class="mat-card-playList" 
+
+          <mat-card class="mat-card-playList"
           fxFlex="0 1 calc(33.3% - 11px)"
           fxFlex.lt-md="0 1 calc(50% - 11px)"
           fxFlex.lt-sm="100%">
-  
+
             <mat-card-title class="mat-card-title-playList">
               <div class="row">
                 <p>
-                  <span class="spam-name" fxFlex="90" fxLayoutAlign="start center">{{PlayList.PlayListName}}</span>
+                  <span class="spam-name" fxFlex="90" fxLayoutAlign="start center">{{PlayList.playListName}}</span>
                   <span fxFlex></span>
                 </p>
                 <p class="channel-name">
                   <span>Canal: {{PlayList.channelName}}</span>
                   <span fxFlex></span>
                   <mat-chip color="accent" selected class="mat-chip-theme">
-                     <span fxLayoutAlign="end center">Gênero: {{PlayList.PlayListTheme}}</span>
+                     <span fxLayoutAlign="end center">Gênero: {{PlayList.playListTheme}}</span>
                   </mat-chip>
                 </p>
               </div>
@@ -38,23 +38,23 @@
       <mat-progress-bar *ngIf="!terror" mode="indeterminate"></mat-progress-bar>
       <div fxLayout="row wrap" f1q  xLayoutAlign="start center" class="div-row">
         <div *ngFor="let PlayList of PlayListsTerror" class="div-list">
-          
-          <mat-card class="mat-card-playList" 
+
+          <mat-card class="mat-card-playList"
           fxFlex="0 1 calc(33.3% - 11px)"
           fxFlex.lt-md="0 1 calc(50% - 11px)"
           fxFlex.lt-sm="100%">
-  
+
             <mat-card-title class="mat-card-title-playList">
               <div class="row">
                 <p>
-                  <span class="spam-name" fxFlex="90" fxLayoutAlign="start center">{{PlayList.PlayListName}}</span>
+                  <span class="spam-name" fxFlex="90" fxLayoutAlign="start center">{{PlayList.playListName}}</span>
                   <span fxFlex></span>
                 </p>
                 <p class="channel-name">
                   <span>Canal: {{PlayList.channelName}}</span>
                   <span fxFlex></span>
                   <mat-chip color="accent" selected class="mat-chip-theme">
-                     <span fxLayoutAlign="end center">Gênero: {{PlayList.PlayListTheme}}</span>
+                     <span fxLayoutAlign="end center">Gênero: {{PlayList.playListTheme}}</span>
                   </mat-chip>
                 </p>
               </div>
@@ -73,23 +73,23 @@
       <mat-progress-bar *ngIf="!aventura" mode="indeterminate"></mat-progress-bar>
       <div fxLayout="row wrap" f1q  xLayoutAlign="start center" class="div-row">
         <div *ngFor="let PlayList of PlayListsAventura" class="div-list">
-          
-          <mat-card class="mat-card-playList" 
+
+          <mat-card class="mat-card-playList"
           fxFlex="0 1 calc(33.3% - 11px)"
           fxFlex.lt-md="0 1 calc(50% - 11px)"
           fxFlex.lt-sm="100%">
-  
+
             <mat-card-title class="mat-card-title-playList">
               <div class="row">
                 <p>
-                  <span class="spam-name" fxFlex="90" fxLayoutAlign="start center">{{PlayList.PlayListName}}</span>
+                  <span class="spam-name" fxFlex="90" fxLayoutAlign="start center">{{PlayList.playListName}}</span>
                   <span fxFlex></span>
                 </p>
                 <p class="channel-name">
                   <span>Canal: {{PlayList.channelName}}</span>
                   <span fxFlex></span>
                   <mat-chip color="accent" selected class="mat-chip-theme">
-                     <span fxLayoutAlign="end center">Gênero: {{PlayList.PlayListTheme}}</span>
+                     <span fxLayoutAlign="end center">Gênero: {{PlayList.playListTheme}}</span>
                   </mat-chip>
                 </p>
               </div>

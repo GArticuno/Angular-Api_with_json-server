@@ -8,10 +8,12 @@ import { PlayList } from '../model/PlayList.model';
 })
 export class PlayListService {
 
-  apiUrl= 'https://api-lives.herokuapp.com/playlists';
+  apiUrl= 'https://parseapi.back4app.com/classes/Lives';
   httpOptions={
     headers: new HttpHeaders({
-      'Content-Type' : 'application/json'
+      'Content-Type' : 'application/json',
+      'X-Parse-Application-Id': process.env.APPLICATION_ID ?? '',
+      'X-Parse-REST-API-Key': process.env.REST_API_KEY ?? ''
     })
   };
   data: PlayList[] = [];
@@ -22,14 +24,13 @@ export class PlayListService {
     const json = this.httpClient.get<PlayList[]>(this.apiUrl)
    .subscribe((res) => {
      this.data = res;
-     console.log(this.data);
    })
-    console.log(json)
+    console.log(json);
     return  this.httpClient.get<PlayList[]>(this.apiUrl);
   }
 
   public getPlayListsByGender(gender: string): Observable<PlayList[]> {
-    return this.httpClient.get<PlayList[]>(this.apiUrl + '?PlayListTheme=' + gender);
+    return this.httpClient.get<PlayList[]>(this.apiUrl + '&where=' + gender);
   }
 
   public postPlayLists(playlist: any): Observable<PlayList[]> {

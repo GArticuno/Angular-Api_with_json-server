@@ -32,7 +32,7 @@ export class PlayListListComponent implements OnInit {
       this.PlayListsSource = data;
       console.log(this.PlayListsSource)
       this.PlayListsSource.forEach( play =>{
-        play.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(play.PlayListLink);
+        play.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(play.playListLink);
       })
       this.source=true;
     });
@@ -41,7 +41,7 @@ export class PlayListListComponent implements OnInit {
       this.PlayListsTerror = data;
       console.log(this.PlayListsTerror)
       this.PlayListsTerror.forEach( play =>{
-        play.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(play.PlayListLink);
+        play.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(play.playListLink);
       })
       this.terror=true;
     });
@@ -50,7 +50,7 @@ export class PlayListListComponent implements OnInit {
       this.PlayListsAventura = data;
       console.log(this.PlayListsAventura)
       this.PlayListsAventura.forEach( play =>{
-        play.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(play.PlayListLink);
+        play.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(play.playListLink);
       })
       this.aventura=true;
     });
