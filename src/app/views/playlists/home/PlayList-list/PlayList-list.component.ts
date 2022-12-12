@@ -29,7 +29,7 @@ export class PlayListListComponent implements OnInit {
 
   getPlayLists(){
     this.rest.getPlayLists().subscribe(data => {
-      this.PlayListsSource = data;
+      this.PlayListsSource = data.results;
       console.log(this.PlayListsSource)
       this.PlayListsSource.forEach( play =>{
         play.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(play.playListLink);
@@ -38,7 +38,7 @@ export class PlayListListComponent implements OnInit {
     });
 
     this.rest.getPlayListsByGender("Terror").subscribe(data => {
-      this.PlayListsTerror = data;
+      this.PlayListsTerror = data.results;
       console.log(this.PlayListsTerror)
       this.PlayListsTerror.forEach( play =>{
         play.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(play.playListLink);
@@ -47,7 +47,7 @@ export class PlayListListComponent implements OnInit {
     });
 
     this.rest.getPlayListsByGender("Aventura").subscribe(data => {
-      this.PlayListsAventura = data;
+      this.PlayListsAventura = data.results;
       console.log(this.PlayListsAventura)
       this.PlayListsAventura.forEach( play =>{
         play.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(play.playListLink);
